@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Ajustar el tamaño del texto */
+  }
+  #card {
+    width: 90%; /* Ajustar el ancho de la tarjeta */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    left: 5%; /* Centrar la tarjeta */
+    top: initial; /* Reiniciar la posición vertical */
+    margin-top: 20px; /* Espacio en la parte superior */
+  }
+  /* Ajustes adicionales según sea necesario */
+}
+
+#card {
+   height:500px;
+   width:800px;
+   margin:5em auto;
+   position: fixed;
+  top: -15px;
+   left: 25%;
+   display:flex;
+   visibility:hidden;
+}
+#card h1 {
+   font-size:2.1em;
+   margin:0;
+   color:pink;
+   text-align: center;
+}
+#card p {
+   font-size: 1.5em;
+   text-align: justify;
+   padding-left: 30px; /* Espacio en blanco a la izquierda */
+   padding-right: 30px; /* Espacio en blanco a la derecha */
+}
+
+
+.side {
+   background:#eee;
+   height:550px;
+   width:400px;
+/*    border:1px solid red; */
+   padding:10px;
+}
+.side.one {
+   width:320px;
+   transform:skew(10deg,20deg);
+   background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
+}
+.side.two {
+   transform:skew(10deg,-15deg);
+   background:linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
+}
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   font-family: 'Sacramento', cursive;
+   background-color: #f1e3d3;
+   overflow: hidden;
+ }
+ 
+ .valentines-day {
+   position: relative;
+   cursor: pointer;
+ }
+ 
+ .envelope {
+   position: relative;
+   filter: drop-shadow(0 0 25px #ffffff);
+ }
+ 
+ .envelope:before {
+   content:"";
+   position: absolute;
+   width:254px;
+   height:254px;
+   background-color: #ff9494;
+   transform: rotate(-45deg);
+   border-radius: 0 15px 0 0;
+   left:-37px;
+   top:-82px;
+ }
+ 
+ .envelope:after {
+   content:"";
+   position: absolute;
+   background-color: #ff9494;
+   width:360px;
+   height:225px;
+   left:-90px;
+   top:45px;
+ }
+
+.sunflower-container {
+  position: relative;
+}
+
+.sunflower-image {
+  background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgF73qsm344_Ehyphenhyphen75-lKiP-yQssH27_oRywuioKNfAG20ja2WQliXSATjQh3jqn-CQ3n5gqQwX3GfY-DAWISq5iJXCCpUWDfV9FVIDSsCr5nv1iZPa2zBd0AH0-6YOuaZFvO2gQHAr3mU7Yc9Tc0NycAOebean7S2HGXHPDNRlzw7qgy6BsHcKBZyxUUok/s1600/sunflower.png');
+  background-size: contain; /* Ajustar el tamaño de la imagen al contenedor */
+  background-repeat: no-repeat; /* Evitar que la imagen se repita */
+  background-position: center; /* Centrar la imagen dentro del contenedor */
+  height: 180px; /* Ajustar el tamaño */
+  width: 180px; /* Ajustar el tamaño */
+  position: relative;
+  transition: .5s;
+  background-color: transparent; /* Hacer el fondo de la imagen transparente */
+}
+
+.sunflower-text {
+  position: absolute;
+  bottom: 30%; /* Cambiado de bottom a top */
+  left: 35%;
+  transform: translate(-10%, 50%); /* Mover hacia arriba */
+  color: white;
+  transition: .5s;
+}
+
+.sunflower-container:hover .sunflower-image,
+.sunflower-container:hover .sunflower-text {
+  transform: translateY(-10px); /* Mueve tanto la imagen como el texto hacia arriba al mismo ritmo */
+}
+
+
+
+ .front {
+   position: absolute;
+   width:0;
+   height:0;
+   border-right: 190px solid #fbd2d2;
+   border-top: 113px solid transparent;
+   border-bottom: 113px solid transparent;
+   top:44px;
+   left:80px;
+   z-index:4;
+ }
+ 
+ .front:before {
+   content:"";
+   position: absolute;
+   width:0;
+   height:0;
+   border-left: 190px solid #fbd2d2;
+   border-top: 113px solid transparent;
+   border-bottom: 113px solid transparent;
+   top:-113px;
+   left:-170px;
+ }
+ 
+ .front:after {
+   width:0;
+   height:0;
+   position: absolute;
+   content:"";
+   border-bottom: 150px solid #fce7e9;
+   border-right:180px solid transparent;
+   border-left: 180px solid transparent;
+   top:-36px;
+   left:-170px;
+ }
+ 
+ .text {
+   position: absolute;
+   font-family: arial;
+   letter-spacing:5px;
+   text-align: center;
+   color: white;
+   z-index:2;
+   top:80px;
+   left:15px;
+   transition: .5s;
+ }
+ 
+ .valentines-day:hover .sunflower { /* Cambiado a sunflower */
+   transform: translateY(-50px) rotate(-45deg); /* Cambiado a sunflower */
+ }
+ 
+ .valentines-day:hover .text {
+   transform: translateY(-50px);
+ }
